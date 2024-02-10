@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище LabMLModelContainer" CdmEntityContainer="LabMLEntities">
+    <EntitySetMapping Name="Analyzer">
+      <EntityTypeMapping TypeName="LabMLModel.Analyzer">
+        <MappingFragment StoreEntitySet="Analyzer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="blood" ColumnName="blood" />
+          <ScalarProperty Name="patient" ColumnName="patient" />
+          <ScalarProperty Name="barcode" ColumnName="barcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company">
+      <EntityTypeMapping TypeName="LabMLModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="insurance_name" ColumnName="insurance_name" />
+          <ScalarProperty Name="insurance_address" ColumnName="insurance_address" />
+          <ScalarProperty Name="insurance_inn" ColumnName="insurance_inn" />
+          <ScalarProperty Name="insurance_bik" ColumnName="insurance_bik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="LabMLModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="blood" ColumnName="blood" />
+          <ScalarProperty Name="service" ColumnName="service" />
+          <ScalarProperty Name="accepted" ColumnName="accepted" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="analyzer" ColumnName="analyzer" />
+          <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="patients">
+      <EntityTypeMapping TypeName="LabMLModel.patients">
+        <MappingFragment StoreEntitySet="patients">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="pwd" ColumnName="pwd" />
+          <ScalarProperty Name="full_name" ColumnName="full_name" />
+          <ScalarProperty Name="passport_s" ColumnName="passport_s" />
+          <ScalarProperty Name="passport_n" ColumnName="passport_n" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="id_Company" ColumnName="id_Company" />
+          <ScalarProperty Name="social_type" ColumnName="social_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="LabMLModel.Services">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="services1" ColumnName="services" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Type">
+      <EntityTypeMapping TypeName="LabMLModel.Type">
+        <MappingFragment StoreEntitySet="Type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="LabMLModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lastenter" ColumnName="lastenter" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="services1" ColumnName="services1" />
+          <ScalarProperty Name="services2" ColumnName="services2" />
+          <ScalarProperty Name="services3" ColumnName="services3" />
+          <ScalarProperty Name="services4" ColumnName="services4" />
+          <ScalarProperty Name="services5" ColumnName="services5" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,20 @@
+﻿LabApp
+
+
+winexe
+C#
+.cs
+C:\Users\Артем\Desktop\УЧЕБА(ВАЖНО)\Курсовые и Практика Одногруппников\Практика(Максим Шуметов)\LabApp\obj\Debug\
+LabApp
+none
+false
+DEBUG;TRACE
+C:\Users\Артем\Desktop\УЧЕБА(ВАЖНО)\Курсовые и Практика Одногруппников\Практика(Максим Шуметов)\LabApp\App.xaml
+13145933769
+2672103127
+29-1996782719
+18-1917414837
+Frames\InsurancePage.xaml;Frames\OrdersPage.xaml;Frames\PatientsPage.xaml;Frames\ServicesPage.xaml;Frames\UsersPage.xaml;Windows\AddInsuranceWindow.xaml;Windows\AddOrderWindow.xaml;Windows\AddPatientWindow.xaml;Windows\AddServiceWindow.xaml;Windows\AddUserWindow.xaml;Windows\AuthWindow.xaml;Windows\TImeoutWindow.xaml;Windows\WorkerWindow.xaml;
+
+True
+

@@ -1,0 +1,39 @@
+﻿<Page x:Class="LabApp.Frames.OrdersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LabApp.Frames"
+      mc:Ignorable="d" 
+      d:DesignHeight="863" d:DesignWidth="1600"
+      Title="OrdersPage">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,14,0,0" TextWrapping="Wrap" Text="Заказы" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Width="192"/>
+
+        <Button x:Name="InsuranceBtn" Content="Страховые компании" FontFamily="Comic Sans MS" FontSize="15" Click="GoToIncurance" Margin="0,10,196,0" Height="27" VerticalAlignment="Top" Background="#FF498C51" BorderBrush="#FF3E7D44" Foreground="White" HorizontalAlignment="Right" Width="165"/>
+        <Button x:Name="PatientBtn" Content="Пациенты" FontFamily="Comic Sans MS" FontSize="15" Click="GoToPatient" Margin="0,10,10,0" Height="27" VerticalAlignment="Top" Background="#FF498C51" BorderBrush="#FF3E7D44" Foreground="White" HorizontalAlignment="Right" Width="88"/>
+        <Button x:Name="ServiceBtn" Content="Услуги" FontFamily="Comic Sans MS" FontSize="15" Click="GoToService" Margin="0,10,103,0" Height="27" VerticalAlignment="Top" Background="#FF498C51" BorderBrush="#FF3E7D44" Foreground="White" HorizontalAlignment="Right" Width="88"/>
+        <Button x:Name="UserBtn" Content="Пользователи" FontFamily="Comic Sans MS" FontSize="15" Click="GoToUser" Margin="0,10,366,0" Height="27" VerticalAlignment="Top" Background="#FF498C51" BorderBrush="#FF3E7D44" Foreground="White" HorizontalAlignment="Right" Width="116"/>
+        <Button x:Name="AddBtn" Content="Добавить" FontFamily="Comic Sans MS" FontSize="15" Click="AddOrder" Margin="0,0,10,10" Height="27" VerticalAlignment="Bottom" Background="#FF498C51" BorderBrush="#FF3E7D44" Foreground="White" HorizontalAlignment="Right" Width="88"/>
+        <Button x:Name="DellBtn" Content="Удалить" FontFamily="Comic Sans MS" FontSize="15" Click="DellOrder" Margin="0,0,119,10" Height="27" VerticalAlignment="Bottom" Background="#FF498C51" BorderBrush="#FF3E7D44" Foreground="White" HorizontalAlignment="Right" Width="88"/>
+
+        <DataGrid x:Name="DGrid" IsReadOnly="True" AutoGenerateColumns="False" Margin="10,60,10,50" FontFamily="Comic Sans MS">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="*"/>
+                <DataGridTextColumn Header="Дата" Binding="{Binding createDate, StringFormat={}{0:dd\.}{0:MM\.}{0:yyyy}}" Width="*"/>
+                <DataGridTextColumn Header="Услуга 1" Binding="{Binding code_services1}" Width="*"/>
+                <DataGridTextColumn Header="Услуга 2" Binding="{Binding code_services2}" Width="*"/>
+                <DataGridTextColumn Header="Услуга 3" Binding="{Binding code_services3}" Width="*"/>
+                <DataGridTextColumn Header="Услуга 4" Binding="{Binding code_services4}" Width="*"/>
+                <DataGridTextColumn Header="Услуга 5" Binding="{Binding code_services5}" Width="*"/>
+                <DataGridTextColumn Header="Статус заказа" Binding="{Binding order_status}" Width="*"/>
+                <DataGridTextColumn Header="Статус услуги" Binding="{Binding service_status}" Width="*"/>
+                <DataGridTextColumn Header="Время вылолнения" Binding="{Binding due_time}" Width="*"/>
+                <DataGridTextColumn Header="Имя пользователя" Binding="{Binding Users.fullName}" Width="*"/>
+                <DataGridTextColumn Header="Имя пациента" Binding="{Binding Patients.fullName}" Width="*"/>
+                <DataGridTextColumn Header="Штрих-код" Binding="{Binding barcode}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

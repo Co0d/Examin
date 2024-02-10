@@ -1,0 +1,30 @@
+﻿<Window x:Class="LabApp.Windows.WorkerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabApp.Windows"
+        mc:Ignorable="d"
+        Title="Главное окно" Height="900" Width="1600" MinHeight="900" MinWidth="1600" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1127*"/>
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="238*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="405*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="#FF76DF83" BorderThickness="1" Background="#FF76E383" Grid.ColumnSpan="4" Height="74" VerticalAlignment="Top" Margin="0,0,0,0"/>
+        <TextBlock HorizontalAlignment="Center" Height="24" FontFamily="Comic Sans MS" FontSize="15" TextWrapping="Wrap" Text="Медицинская лаборатория № 20 г. Санкт-Петербург" VerticalAlignment="Center" Width="441"/>
+        <TextBlock x:Name="TimerCount" Text="00:00:00" FontFamily="Comic Sans MS" FontSize="15" TextAlignment="Center" TextWrapping="Wrap" Grid.Column="1" Margin="26,27,26,0" Height="20" VerticalAlignment="Top"/>
+        <TextBlock x:Name="UserName" Text="Alexander Pogozhew" FontFamily="Comic Sans MS" FontSize="15" TextWrapping="Wrap" TextAlignment="Center" Grid.Column="2" Margin="19,26,19,0" Height="23" VerticalAlignment="Top"/>
+        <Image x:Name="UserImage" Margin="27,7,26,0" Grid.Column="3" Height="60" VerticalAlignment="Top"/>
+        <Image Grid.Column="0" Margin="7,7,0,0" Source="/Resources/logo.png" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="72"/>
+        <Button Grid.Column="0" Content="EX" Margin="0,25,31,0" Click="ExitBtn" Background="#FF498C51" BorderBrush="#FF3E7D44" Foreground="White" HorizontalAlignment="Right" Width="54" Height="21" VerticalAlignment="Top"/>
+
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="4" Margin="0,74,0,0" Grid.RowSpan="2"/>
+    </Grid>
+</Window>

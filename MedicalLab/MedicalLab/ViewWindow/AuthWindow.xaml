@@ -1,0 +1,210 @@
+﻿<Window x:Class="MedicalLab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MedicalLab"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1000"
+        Background="Transparent"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="MovingWin">
+    <Grid>
+
+        <Grid Width="350" Height="450"
+          HorizontalAlignment="Center"
+          Margin="150,0,0,0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF52F744"/>
+                    <GradientStop Color="#FF0DF9FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+        </Grid>
+
+
+        <Grid Width="400" Height="400"
+          HorizontalAlignment="Center"
+          Margin="0,0,100,0"
+          Background="White">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="1" Grid.Row="0" 
+               Content="Авторизация"
+               HorizontalAlignment="Left" VerticalAlignment="Bottom"
+               FontFamily="Comic Sans MS"
+               FontSize="20"
+               FontWeight="Bold"/>
+
+            <Label Grid.Column="1" Grid.Row="1" 
+               Content="Логин"
+               HorizontalAlignment="Left" VerticalAlignment="Bottom"
+               FontFamily="Comic Sans MS"
+               FontSize="12"/>
+            <TextBox Grid.Column="1" Grid.Row="2"
+                 Height="40"
+                 FontSize="29"
+                 FontFamily="Comic Sans MS"
+                 x:Name="TxbLogin"
+                 KeyUp="TxbLogin_KeyUp"/>
+
+
+            <Label Grid.Column="1" Grid.Row="3" 
+               Content="Пароль"
+               HorizontalAlignment="Left" VerticalAlignment="Bottom"
+               FontFamily="Comic Sans MS"
+               FontSize="12"/>
+            <TextBox Grid.Column="1" Grid.Row="4"
+                 Height="40"
+                 FontSize="29"
+                 FontFamily="Comic Sans MS"
+                 x:Name="TxbPassword_Open"
+                 Background="White"/>
+            <PasswordBox Grid.Column="1" Grid.Row="4"
+                     Height="40"
+                     FontSize="29"
+                     x:Name="TxbPassword"
+                     KeyUp="TxbPassword_KeyUp"
+                     Background="White"/>
+
+
+            <CheckBox Grid.Column="1" Grid.Row="5"
+                  Content="Показать/Скрыть пароль"
+                  HorizontalAlignment="Left" VerticalAlignment="Top"
+                  FontFamily="Comic Sans MS"
+                  x:Name="showpass"
+                  Click="Button_Click"/>
+
+            <Button Grid.Column="1" Grid.Row="6"
+                Content="Войти" Height="40"
+                VerticalAlignment="Top"
+                FontFamily="Comic Sans MS"
+                FontSize="14"
+                Foreground="White"
+                FontWeight="Bold"
+                x:Name="Autorization"
+                Click="Autorization_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF52F744"/>
+                        <GradientStop Color="#FF0DF9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Label Grid.Column="1" Grid.Row="0"
+               Content="Медицинской лаборатории №20"
+               FontSize="10"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top"
+               FontFamily="Comic Sans MS"/>
+            <Label Grid.Column="1" Grid.Row="0"
+               Content="города"
+               FontSize="10"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center" Margin="0,0,0,30"
+               FontFamily="Comic Sans MS"/>
+            <Label Grid.Column="1" Grid.Row="0"
+               Content="Санкт-Петербург"
+               FontSize="10"
+               HorizontalAlignment="Center" Margin="0,0,0,30"
+               VerticalAlignment="Bottom"
+               FontFamily="Comic Sans MS"/>
+        </Grid>
+
+        <Grid Width="300"
+          Height="300" Margin="567,75,-67,75" 
+          Background="White"
+          Visibility="Hidden"
+          x:Name="Auth_Win_1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="1" Grid.Row="0"
+               Content="Подтверждение кода"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="16"
+               FontFamily="Comic Sans MS"
+               FontWeight="Bold"/>
+
+            <Label Grid.Column="1" Grid.Row="1" 
+               Content="Код:"
+               FontFamily="Comic Sans MS"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"/>
+            <TextBox Grid.Column="1" Grid.Row="1"
+                   Width="100" Height="40" IsEnabled="False"
+                   Name="TXB1" FontSize="28"/>
+
+            <Label Grid.Column="1" Grid.Row="3" 
+               Content="Введите Код:"
+               FontFamily="Comic Sans MS"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"/>
+            <TextBox Grid.Column="1" Grid.Row="3"
+                 Width="100"
+                 HorizontalAlignment="Right"
+                 Height="40"
+                 Name="TXB2" FontSize="28"/>
+
+
+            <Button Grid.Column="1" Grid.Row="4"
+                Width="100" Height="40"
+                Content="Далее"
+                FontFamily="Comic Sans MS"
+                FontWeight="Bold"
+                Foreground="White"
+                Click="Next_Btn">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF52F744"/>
+                        <GradientStop Color="#FF0DF9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+
+        <Image Source="/Image/logo.png"
+            Grid.Column="0" Grid.Row="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Width="226" Height="237" Margin="134,82,0,0"/>
+
+        <Button Width="30" Height="30"
+            Background="Transparent"
+            Content="X" Margin="714,180,256,590"
+            Foreground="White"
+            FontWeight="Bold"
+            BorderThickness="0"
+            Click="Click_Exit"/>
+    </Grid>
+</Window>

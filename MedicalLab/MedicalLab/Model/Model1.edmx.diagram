@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2534daf4d185431ba58ba9591deded3f" Name="Diagram1" ZoomLevel="139">
+        <EntityTypeShape EntityType="LabMLModel.Analyzer" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMLModel.Company" Width="1.5" PointX="3.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMLModel.Order" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMLModel.patients" Width="1.5" PointX="6" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMLModel.Services" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMLModel.Type" Width="1.5" PointX="3.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMLModel.Users" Width="1.5" PointX="6" PointY="3" IsExpanded="true" />
+        <AssociationConnector Association="LabMLModel.FK_Analyzer_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMLModel.FK_Analyzer_patients" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMLModel.FK_patients_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMLModel.FK_Order_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMLModel.FK_Order_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMLModel.FK_Users_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMLModel.FK_Users_Services1" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMLModel.FK_Users_Services2" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMLModel.FK_Users_Services3" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMLModel.FK_Users_Services4" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMLModel.FK_Users_Type" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

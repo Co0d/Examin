@@ -1,0 +1,46 @@
+﻿<Window x:Class="LabApp.Windows.AddPatientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabApp.Windows"
+        mc:Ignorable="d"
+        Title="Добавление пациента" Height="495" Width="400" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="443*"/>
+        </Grid.RowDefinitions>
+        <TextBlock TextWrapping="Wrap" Text="Добавление пациента" FontFamily="Comic Sans MS" FontSize="15" HorizontalAlignment="Center" Width="166" Margin="0,10,0,6"/>
+
+        <TextBlock HorizontalAlignment="Right" Margin="0,15,275,0" TextWrapping="Wrap" Text="Полное имя" FontFamily="Comic Sans MS" FontSize="15" Grid.Row="1" Height="20" VerticalAlignment="Top" Width="92"/>
+        <TextBox x:Name="NameTxb" Margin="0,17,17,0" TextWrapping="Wrap" Text="{Binding fullName}" FontFamily="Comic Sans MS" FontSize="15" HorizontalAlignment="Right" Width="245" Grid.Row="1" VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Right" Margin="0,54,309,0" TextWrapping="Wrap" Text="Логин" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Grid.Row="1" Width="57"/>
+        <TextBox x:Name="LogTxb" HorizontalAlignment="Right" Margin="0,57,17,0" TextWrapping="Wrap" Text="{Binding login}" FontFamily="Comic Sans MS" FontSize="15" Width="245" Grid.Row="1" VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Right" Margin="0,94,309,0" TextWrapping="Wrap" Text="Пароль" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Grid.Row="1" RenderTransformOrigin="0.801,0.453" Width="57"/>
+        <TextBox x:Name="PassTxb" HorizontalAlignment="Right" Margin="0,97,17,0" TextWrapping="Wrap" Text="{Binding password}" FontFamily="Comic Sans MS" FontSize="15" Width="245" Grid.Row="1" VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Right" Margin="0,125,290,0" TextWrapping="Wrap" Text="Дата рождения" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Grid.Row="1" Width="76"/>
+        <DatePicker x:Name="BirthTP" HorizontalAlignment="Right" Margin="0,134,17,0" SelectedDate="{Binding birthday}" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Width="245" Grid.Row="1"/>
+
+        <TextBlock HorizontalAlignment="Right" Margin="0,171,268,0" TextWrapping="Wrap" Text="Паспортные данные" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Grid.Row="1" Width="98"/>
+        <TextBox x:Name="PasporTxb" HorizontalAlignment="Right" Margin="0,177,17,0" Text="{Binding passport_data}" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Width="245" Grid.Row="1"/>
+
+        <TextBlock HorizontalAlignment="Right" Margin="0,219,309,0" TextWrapping="Wrap" Text="Email" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Grid.Row="1" Width="57"/>
+        <TextBox x:Name="EmailTxb" HorizontalAlignment="Right" Margin="0,217,17,0" Text="{Binding email}" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Width="245" Grid.Row="1"/>
+
+        <TextBlock HorizontalAlignment="Right" Margin="0,248,282,0" TextWrapping="Wrap" Text="Номер полиса" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Grid.Row="1" Width="83"/>
+        <TextBox x:Name="InsTxb" HorizontalAlignment="Right" Margin="0,257,17,0" Text="{Binding insurance_number}" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Width="245" Grid.Row="1" RenderTransformOrigin="0.5,0.5"/>
+
+        <TextBlock HorizontalAlignment="Right" Margin="0,299,277,0" TextWrapping="Wrap" Text="Тип полиса" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Grid.Row="1" Width="90"/>
+        <TextBox x:Name="InsTypeTxb" HorizontalAlignment="Right" Margin="0,297,17,0" Text="{Binding insurance_type}" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Width="245" Grid.Row="1"/>
+
+        <TextBlock HorizontalAlignment="Right" Margin="0,334,265,0" TextWrapping="Wrap" Text="Стаховая компания" FontFamily="Comic Sans MS" FontSize="15" VerticalAlignment="Top" Grid.Row="1" Width="101"/>
+        <ComboBox x:Name="InsNameCB" HorizontalAlignment="Right" Margin="0,343,17,0" SelectedItem="{Binding Insurance_companes}" FontFamily="Comic Sans MS" FontSize="15" DisplayMemberPath="name" VerticalAlignment="Top" Width="245" Grid.Row="1"/>
+
+        <Button x:Name="AddBtn" Content="Добавить" FontFamily="Comic Sans MS" FontSize="15" Click="Add_Patient" Margin="0,377,0,0" Background="#FF498C51" BorderBrush="#FF3E7D44" Foreground="White" HorizontalAlignment="Center" Width="96" Height="25" VerticalAlignment="Top" Grid.Row="1"/>
+
+    </Grid>
+</Window>
